@@ -1,0 +1,124 @@
+body {
+	font-family: 'Aptos', 'Inter', Arial, Helvetica, sans-serif;
+	background: #fff;
+	color: #222;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #0056b3;
+	text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: #f8f8f8;
+	border-bottom: 1px solid #ddd;
+	z-index: 100;
+}
+.nav-container {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5em 1em;
+}
+.nav-brand {
+	font-weight: 700;
+	font-size: 1.25em;
+	letter-spacing: 2px;
+}
+.nav-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 1em;
+}
+.nav-links li { display: inline; }
+.nav-links a {
+	color: #222;
+	padding: 0.2em 0.5em;
+	border-radius: 3px;
+	transition: background 0.2s;
+}
+.nav-links a.active, .nav-links a:hover {
+	background: #e3e3e3;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 5em auto 0 auto; /* space for navbar */
+	padding: 2em 1em 1em 1em;
+}
+
+.header {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 1em;
+	margin-bottom: 1.5em;
+}
+.lead {
+	font-size: 1.15em;
+	color: #444;
+}
+
+.row {
+	display: flex;
+	gap: 2em;
+	margin-bottom: 2em;
+}
+.col {
+	flex: 1;
+	min-width: 220px;
+}
+.col.left { }
+.col.middle { }
+.col.right { }
+
+.about-flex {
+	display: flex;
+	align-items: center;
+	gap: 2em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.about-img img {
+	display: block;
+	border-radius: 6px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	max-width: 100%;
+	height: auto;
+}
+.about-text {
+	flex: 1;
+}
+
+.footer {
+	text-align: center;
+	color: #999;
+	font-size: 0.95em;
+	margin-top: 3em;
+	padding: 1em 0 0 0;
+	/*border-top: 1px solid #eee;*/
+}
+
+/* Responsive for mobile */
+@media (max-width: 700px) {
+	.row { flex-direction: column; }
+	.nav-container { flex-direction: column; align-items: flex-start; }
+	.navbar { position: static; }
+	.container { margin: 0; padding-top: 1.5em; }
+	.about-flex {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.about-img {
+		margin-bottom: 1em;
+		text-align: center;
+	}
+}

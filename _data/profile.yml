@@ -1,0 +1,28 @@
+name: Nicholas B. Pratt
+main_name: Nicholas Pratt
+contact_name: Nicholas Bane Pratt
+role: Undergraduate Researcher
+institution: University at Buffalo
+email: nbpratt@buffalo.edu
+image: /Nicholas_Pratt_Original.jpg
+image_alt: Nicholas B. Pratt
+
+navigation:
+  - label: Home
+    href: "#home"
+  - label: Contact
+    href: "#contact"
+
+social_links:
+  - label: CV
+    href: /Nicholas_Pratt_CV.pdf
+  - label: LinkedIn
+    href: https://www.linkedin.com/in/nicholasbpratt
+  - label: GitHub
+    href: https://github.com/pratt-83
+  - label: X
+    href: https://x.com/nicholasbpratt
+
+about:
+  - I am a student researcher at the University at Buffalo focused on computational approaches for biological and engineering systems.
+  - .

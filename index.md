@@ -17,15 +17,35 @@ title: Home
   <div class="col-12 col-md-8 col-lg-9">
     <h1 class="display-name mb-2">{{ profile.main_name | default: profile.name }}</h1>
     <p class="mb-3">{{ profile.institution }}</p>
-    {% for paragraph in profile.about %}
-      <p class="mb-3">{{ paragraph }}</p>
-    {% endfor %}
+    <p class="mb-2">{{ profile.about | first }}</p>
+    {% if profile.about.size > 1 %}
+      <details class="about-more">
+        <summary aria-label="Show more about me">
+          <span class="about-toggle-label">More</span>
+          <span class="about-toggle-icon" aria-hidden="true">&gt;</span>
+        </summary>
+        {% for paragraph in profile.about offset:1 %}
+          <p class="about-extra mb-0">{{ paragraph }}</p>
+        {% endfor %}
+      </details>
+    {% endif %}
   </div>
+</section>
+
+<section id="research" class="section-block">
+  <h2>Research</h2>
+  {% for paragraph in profile.research %}
+    <p class="mb-3">{{ paragraph }}</p>
+  {% endfor %}
 </section>
 
 <section id="contact" class="section-block">
   <h2>Contact</h2>
-  <p class="mb-1">{{ profile.contact_name | default: profile.name }}</p>
-  <p class="mb-1">{{ profile.institution }}</p>
-  <p class="mb-1">Email: <a href="mailto:{{ profile.email }}">{{ profile.email }}</a></p>
+  <p class="mb-0">{{ profile.contact_name | default: profile.name }}</p>
+  <p class="mb-3">{{ profile.role }}</p>
+  <p class="mb-0">{{ profile.institution }}</p>
+  <p class="mb-0">{{ profile.department }}</p>
+  <p class="mb-0">{{ profile.address_line1 }}</p>
+  <p class="mb-0">{{ profile.address_line2 }}</p>
+  <p class="mb-0">Email: {{ profile.email }}</p>
 </section>

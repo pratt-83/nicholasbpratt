@@ -92,6 +92,39 @@ body {
   filter: saturate(0.9) contrast(1.04);
 }
 
+.about-more {
+  margin-bottom: 1rem;
+}
+
+.about-more summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.about-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.about-toggle-icon {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1;
+  margin-left: 0.25rem;
+  transition: transform 0.2s ease;
+}
+
+.about-more[open] .about-toggle-icon {
+  transform: rotate(90deg);
+}
+
+.about-extra {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
 h1,
 h2,
 h3 {

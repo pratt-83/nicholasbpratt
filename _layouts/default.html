@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+  <body>
+    {% assign profile = site.data.profile %}
+    <header class="site-header border-bottom border-dark-subtle">
+      <nav class="container content-width py-3">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <ul class="social-links list-unstyled d-flex flex-wrap align-items-center gap-3 mb-0">
+            {% for item in profile.social_links %}
+              <li>
+                <a href="{{ item.href | relative_url }}" {% if item.label != "CV" %}target="_blank" rel="noopener noreferrer"{% endif %} aria-label="{{ item.label }}">
+                  {% if item.label == "LinkedIn" %}
+                    <i class="bi bi-linkedin social-icon" aria-hidden="true"></i><span class="visually-hidden">{{ item.label }}</span>
+                  {% elsif item.label == "GitHub" %}
+                    <i class="bi bi-github social-icon" aria-hidden="true"></i><span class="visually-hidden">{{ item.label }}</span>
+                  {% elsif item.label == "X" %}
+                    <i class="bi bi-twitter-x social-icon" aria-hidden="true"></i><span class="visually-hidden">{{ item.label }}</span>
+                  {% else %}
+                    {{ item.label }}
+                  {% endif %}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+          <ul class="navbar-nav nav-tabs-wrap d-flex flex-row flex-wrap justify-content-end gap-1 mb-0">
+            {% for item in profile.navigation %}
+              <li class="nav-item"><a class="nav-link" href="{{ item.href }}">{{ item.label }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home" class="container content-width py-4 py-md-5">
+      {{ content }}
+    </main>
+
+    <footer class="container content-width py-4 border-top border-dark-subtle small text-muted">
+      <p class="mb-0">&copy; {{ "now" | date: "%Y" }} {{ profile.name }}</p>
+    </footer>
+
+  </body>
+</html>

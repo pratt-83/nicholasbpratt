@@ -1,0 +1,37 @@
+name: Nicholas B. Pratt
+main_name: Nicholas Pratt
+contact_name: Nicholas Bane Pratt
+role: Undergraduate Researcher
+institution: University at Buffalo
+department: Department of Computer Science and Engineering
+address_line1: Davis Hall
+address_line2: Buffalo, NY, 14260-2500
+email: nbpratt [at] buffalo.edu
+image: /Nicholas_Pratt_Original.jpg
+image_alt: Nicholas B. Pratt
+
+navigation:
+  - label: Home
+    href: "#home"
+  - label: Research
+    href: "#research"
+  - label: Contact
+    href: "#contact"
+
+social_links:
+  - label: CV
+    href: /Nicholas_Pratt_CV.pdf
+  - label: LinkedIn
+    href: https://www.linkedin.com/in/nicholasbpratt
+  - label: GitHub
+    href: https://github.com/pratt-83
+  - label: X
+    href: https://x.com/nicholasbpratt
+
+about:
+  - Hi - I am an undergraduate researcher studying Computational Biology in the Department of Computer Science and Engineering at the University at Buffalo. At UB, I work in the Scalable Computing Research (SCoRe) group led by Jaroslaw Zola. My primary research interest is in formalizing the genotype-to-phenotype map using machine learning and statistical modeling methodologies. I am particularly interested in applications to understanding fundamental biomolecular processes downstream of genomics, quantitative plant breeding, and advancing concepts in theoretical biology.
+  - Outside of my professional life I love to be outdoors gardening, in my garden I grow mostly perennial fruits like currents and elderberries. I also lead an effort to restore a former dump site near my house to its native habitat by propagating and planting native species. I love to hike where my goal is to reach the highest point of all 50 states, as of March 2026, my standing is 10/50. I also interested in Central and Eastern European history and current geopolitics which I study both as a hobby and at university where I studied abroad in Czechia as a U.S. Department of Defense Gilman Scholar.
+
+research:
+  - My current research is focused on ways to quantify quality of genomic data for training genome foundation models using information theory metrics and surrogate models. Previously I have completed projects in the SCoRe group to retrain open-source machine learning model Remora, to detect 8-oxo-guanine during the basecalling stage of nanopore sequencing. For this work I was awarded the Barry Goldwater Scholarship. 
+  - I have also worked on several plant genomics projects. In Victor Albert’s lab in the University at Buffalo Department of Biological Sciences, I worked on genome assembly, annotation, and analysis related to the convergent evolution of carnivory in the pitcher plant Sarracenia purpurea. I also completed a research program through the Center for Research on Programmable Plant Systems with Michael Gore and Kelly Robbins at Cornell University, where I built statistical modeling pipelines to analyze data from a slac1 gene knockout experiment in maize, with the goal of better understanding drought-tolerance-related traits.

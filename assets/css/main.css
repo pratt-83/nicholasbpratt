@@ -59,6 +59,14 @@ body {
   vertical-align: -0.08em;
 }
 
+.email-icon {
+  font-size: 0.95rem;
+  line-height: 1;
+  vertical-align: -0.08em;
+  margin-right: 0.35rem;
+  color: var(--accent);
+}
+
 .nav-tabs-wrap .nav-link {
   border-radius: 0;
   border: 1px solid transparent;

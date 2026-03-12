@@ -47,5 +47,5 @@ title: Home
   <p class="mb-0">{{ profile.department }}</p>
   <p class="mb-0">{{ profile.address_line1 }}</p>
   <p class="mb-0">{{ profile.address_line2 }}</p>
-  <p class="mb-0">Email: {{ profile.email }}</p>
+  <p class="mb-0"><i class="bi bi-envelope email-icon" aria-hidden="true"></i><span class="visually-hidden">Email:</span> {{ profile.email }}</p>
 </section>
